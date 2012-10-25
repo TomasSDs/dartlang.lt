@@ -11,9 +11,10 @@ description: "Išmokite pagrindines Dart kalbos ypatybes."
 	 kitokia kalba.</p>
 
 <section>
-<h4 id="TOC"> Contents </h4>
+<h2 id="TOC">Turinys</h2>
   <ol class="toc">
     <li><a href="#standartine-dart-programa">Standartinė Dart programa</a></li>
+    <li><a href="#svarbus-faktai">Svarbūs faktai</a></li>
   </ol>
 </section>
 
@@ -24,13 +25,13 @@ description: "Išmokite pagrindines Dart kalbos ypatybes."
 {% highlight dart %}
 // Sukuriama funkcija
 spausdintiSkaiciu (num aSkaicius) {
-print('Skaicius yra: $aSkaicius.');    // Atspausdina tekstą į konsolę
+  print('Skaicius yra: $aSkaicius.');    // Atspausdina tekstą į konsolę
 }
 
 // Čia vieta, kurioje aplikacija pradeda darbą
 main() {
-var skaicius = 42;            // Deklaruojamas ir inicijuojamas kintamasis.
-spausdintiSkaiciu(skaicius);        // Iškviečiama funkcija
+  var skaicius = 42;                  // Deklaruojamas ir inicijuojamas kintamasis.
+  spausdintiSkaiciu(skaicius);        // Iškviečiama funkcija
 }
 {% endhighlight %}
 
@@ -89,4 +90,78 @@ spausdintiSkaiciu(skaicius);        // Iškviečiama funkcija
 				mes naudojame „dviejų tarpų“ tabuliacijas.
 		  </div>
 	 </aside>
+</div>
+
+<div class="sect1" title="Svarbūs faktai">
+	 <h2 id="svarbus-faktai"/>Svarbūs faktai</h2>
+
+	 <p>Mokantis Dart kalbos siūlome prisiminti šiuos faktus ir sąvokas.</p>
+
+	 <div class="itemizedlist">
+		  <ul class="itemizedlist">
+				<li class="listitem">
+					 <p>
+						  Viskas ką tik galite išsaugoti į kintamąjį yra
+						  <span class="emphasis"><em>objektas</em></span>, 
+						  ir kiekvienas objektas yra instancija į
+						  <span class="emphasis"><em>klasę</em></span>. 
+						  Netgi skaičiai ir funkcijos yra objektai.
+						  Visi obejektai paveldi 
+						  <a class="ulink" href="http://api.dartlang.org/dart_core/Object.html" target="_blank">Object</a>
+						  klasę.
+					 </p>
+				</li>
+
+				<li class="listitem">
+					 <p>
+						  Specifying static types (such as 
+						  <code class="literal">num</code> in the preceding example) clarifies your
+						  intent and enables static checking by tools, but it’s optional. (You
+						  might notice when you’re debugging your code that objects with no
+						  specified type get a special type: <code class="literal">dynamic</code>.)
+					 </p>
+					 
+					 <p>
+						  Nurodant statinius tipus (tokius kaip
+						  <code class="literal">num</code> praeitame pavizdyje) paaiškinami , but it’s optional. (You
+						  might notice when you’re debugging your code that objects with no
+						  specified type get a special type: <code class="literal">dynamic</code>.)
+					 </p>
+				</li>
+				
+				<li class="listitem">
+					 <p>
+						  Dart parses all your code before running it. You can provide
+						  tips to Dart—for example, by using types or compile-time constants—to
+						  catch errors or help your code run faster.
+					 </p>
+				</li>
+				
+				<li class="listitem"><p>Dart supports top-level functions (such as main()), as well as
+				functions tied to a class or object (<span class="emphasis"><em>static</em></span> and
+				<span class="emphasis"><em>instance methods</em></span>, respectively).</p></li><li class="listitem"><p>Similarly, Dart supports top-level
+				<span class="emphasis"><em>variables</em></span>, as well as variables tied to a class
+				or object (static and instance variables). Instance variables are
+				sometimes known as <em class="firstterm">fields</em> or
+				<em class="firstterm">properties</em>.</p></li><li class="listitem"><p>Unlike Java, Dart doesn’t have the keywords <code class="literal">public</code>, <code class="literal">protected</code>, and <code class="literal">private</code>. If an identifier starts with an
+				underscore (_), it’s private to its library. For details, see <a class="xref" href="ch02.html#libraries" title="Libraries and visibility">Libraries and visibility</a>.</p></li><li class="listitem"><p><em class="firstterm">Identifiers</em> can start with a letter or _,
+				followed by any combination of those characters plus digits.</p></li><li class="listitem"><p>Sometimes it matters whether something is an
+				<span class="emphasis"><em>expression</em></span> or a <span class="emphasis"><em>statement</em></span>,
+				so we’ll be precise about those two words.</p></li><li class="listitem"><p>Dart tools can report two kinds of errors: warnings and errors.
+				Warnings are just hints that your code might not work, but they don’t
+				prevent your program from executing. Errors can be either compile-time
+				or run-time. A compile-time error prevents the code from executing at
+				all; a run-time error results in an exception <a class="xref" href="ch02.html#exceptions" title="Exceptions">Exceptions</a> being raised while the code executes.</p></li><li class="listitem"><p>Dart has two <em class="firstterm">runtime modes</em>: production
+				and checked. Production is faster, but checked is helpful at
+				development.</p></li></ul>
+	 </div>
+	 
+	 <div class="sect2" title="Runtime modes"><h3 id="ch02-runtime-modes"/>Runtime modes</h3><p>We recommend that you develop and debug in checked mode, and
+		  deploy to production mode.</p><p><span class="emphasis"><em>Production mode</em></span> is the default runtime mode
+		  of a Dart program, optimized for speed. Production mode ignores assert
+		  statements <a class="xref" href="ch02.html#assert" title="Assert">Assert</a> and static types.</p><p><span class="emphasis"><em>Checked mode</em></span> is a developer-friendly mode
+		  that helps you catch some type errors during runtime. For example, if
+		  you assign a non-number to a variable declared as a <code class="literal">num</code>, then checked mode throws an
+		  exception.</p>
+				</div>
 </div>
