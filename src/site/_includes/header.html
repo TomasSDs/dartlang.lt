@@ -2,11 +2,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	{% capture base_url %}http://91.225.104.10/dart/{% endcapture %}{% capture page_title %}{% if page.title %}{{ page.title }} | {%endif%}Dart: struktūrizuotos WEB aplikacijos{% endcapture %}
+	{% capture base_url %}/{% endcapture %}{% capture page_title %}{% if page.title %}{{ page.title }} | {%endif%}Dart: struktūrizuotos WEB aplikacijos{% endcapture %}
 	<title>{{ page_title }}</title>
 	 
 	<meta itemprop="name" content="{{ page_title }}">
-	<meta itemprop="image" content="{{ base_url }}media/img/dart.png">
+	<meta itemprop="image" content="/media/img/dart.png">
 	<meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Dart yra nauja platforma skirta kurti struktūrizuotoms web aplikacijoms modernioms web naršyklėms. Dart sudaro: kalba, VM, bibliotekos, įrankiai ir JavaScript kompiliatorius. Išbandykite tai šiandien!{% endif %}">
 	 
 	<link href="{{ base_url }}media/css/bootstrap.min.css" rel="stylesheet">

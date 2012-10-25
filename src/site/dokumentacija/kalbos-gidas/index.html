@@ -131,37 +131,54 @@ main() {
 				
 				<li class="listitem">
 					 <p>
-						  Dart parses all your code before running it. You can provide
-						  tips to Dart—for example, by using types or compile-time constants—to
-						  catch errors or help your code run faster.
+						  Dart apdoroja jūsų kodą dar prieš jį paleidžiant. Galite padėti 
+						  Dart aptikti klaidas. Pavyzdžiui, naudojant tipus, arba kompiliavimo 
+						  laiko konstantas, kintamiesiems - galite greičiau rasti klaidą kode ir 
+						  paleisti savo programą greičiau.
 					 </p>
 				</li>
-				
-				<li class="listitem"><p>Dart supports top-level functions (such as main()), as well as
-				functions tied to a class or object (<span class="emphasis"><em>static</em></span> and
-				<span class="emphasis"><em>instance methods</em></span>, respectively).</p></li><li class="listitem"><p>Similarly, Dart supports top-level
-				<span class="emphasis"><em>variables</em></span>, as well as variables tied to a class
-				or object (static and instance variables). Instance variables are
-				sometimes known as <em class="firstterm">fields</em> or
-				<em class="firstterm">properties</em>.</p></li><li class="listitem"><p>Unlike Java, Dart doesn’t have the keywords <code class="literal">public</code>, <code class="literal">protected</code>, and <code class="literal">private</code>. If an identifier starts with an
-				underscore (_), it’s private to its library. For details, see <a class="xref" href="ch02.html#libraries" title="Libraries and visibility">Libraries and visibility</a>.</p></li><li class="listitem"><p><em class="firstterm">Identifiers</em> can start with a letter or _,
-				followed by any combination of those characters plus digits.</p></li><li class="listitem"><p>Sometimes it matters whether something is an
-				<span class="emphasis"><em>expression</em></span> or a <span class="emphasis"><em>statement</em></span>,
-				so we’ll be precise about those two words.</p></li><li class="listitem"><p>Dart tools can report two kinds of errors: warnings and errors.
-				Warnings are just hints that your code might not work, but they don’t
-				prevent your program from executing. Errors can be either compile-time
-				or run-time. A compile-time error prevents the code from executing at
-				all; a run-time error results in an exception <a class="xref" href="ch02.html#exceptions" title="Exceptions">Exceptions</a> being raised while the code executes.</p></li><li class="listitem"><p>Dart has two <em class="firstterm">runtime modes</em>: production
-				and checked. Production is faster, but checked is helpful at
-				development.</p></li></ul>
+		  </ul>
 	 </div>
+</div>
+
+<div class="sect1" title="Kintamieji" id="kintamieji">
+	 <h2 id="variables"/>Kintamieji</h2>
 	 
-	 <div class="sect2" title="Runtime modes"><h3 id="ch02-runtime-modes"/>Runtime modes</h3><p>We recommend that you develop and debug in checked mode, and
-		  deploy to production mode.</p><p><span class="emphasis"><em>Production mode</em></span> is the default runtime mode
-		  of a Dart program, optimized for speed. Production mode ignores assert
-		  statements <a class="xref" href="ch02.html#assert" title="Assert">Assert</a> and static types.</p><p><span class="emphasis"><em>Checked mode</em></span> is a developer-friendly mode
-		  that helps you catch some type errors during runtime. For example, if
-		  you assign a non-number to a variable declared as a <code class="literal">num</code>, then checked mode throws an
-		  exception.</p>
+	 <p>
+		  Šiame pavizdyje parodome kaip sukuriamas kintamasis ir kaip jam priskiriama reikšmė:
+	 </p>
+
+{% highlight dart %}
+var vardas = 'Paulius';
+{% endhighlight %}
+	 
+	 <p>
+		  Kintamieji yra nuorodos. Kintamasis pavadinimu <code class="literal">vardas</code> 
+		  yra nuoroda į String objektą
+		  su reikšme <span class="quote">“<span class="quote">Paulius</span>”</span>.
+	 </p>
+
+	 <div class="sect2" title="Default value"><h3 id="variables-default-value"/>Default value</h3><p>Uninitialized variables have an initial value of <code class="literal">null</code>. Even variables with numeric types are
+		  initially null, because numbers are objects.</p><pre class="programlisting">int lineCount;
+	 assert(lineCount == null); // Variables (even if they will be numbers) are initially null.</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>The assert() call is ignored in production mode. In checked
+				mode, <code class="literal">assert(<em class="replaceable"><code>condition</code></em>)</code>
+				throws an exception unless <em class="replaceable"><code>condition</code></em> is
+				true. For details, see <a class="xref" href="ch02.html#assert" title="Assert">Assert</a>.</div></aside><div class="sect2" title="Optional types"><h3 id="variables-optional-types"/>Optional types</h3><p>You have the option of adding static types to your variable
+		  declarations:</p><pre class="programlisting">String name = 'Bob';</pre><p>Adding types is a way to clearly express your intent. Tools such
+		  as compilers and editors can use these types to help you, by providing
+		  early warnings for bugs and code completion.</p><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>This chapter follows the <a class="ulink" href="http://www.dartlang.org/articles/style-guide/#type-annotations">style
+				guide recommendation</a> of using <code class="literal">var</code>, rather than type annotations, for local
+				variables.</div></aside><div class="sect2" title="Final and const"><h3 id="id554927"/>Final and const</h3><p>If you never intend to change a variable, use <code class="literal">final</code> or <code class="literal">const</code>, either instead of <code class="literal">var</code> or in addition to a type. A final variable
+		  can be set only once; a const variable is a compile-time
+		  constant.</p><p>A local, top-level, or class variable that’s declared as <code class="literal">final</code> is initialized the first time it’s
+		  used.</p><pre class="programlisting">final name = 'Bob';   // Or: final String name = 'Bob';
+	 // name = 'Alice';    // Uncommenting this results in an error</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>Lazy initialization of final variables helps apps start up
+				faster.</p></div><p>Use <code class="literal">const</code> for variables that
+		  you want to be compile-time constants. Where you declare the variable,
+		  set the value to a compile-time constant such as a literal, a const
+		  variable, or the result of an arithmetic operation on constant
+		  numbers.</p><pre class="programlisting">const bar = 1000000;       // Unit of pressure (in dynes/cm2)
+	 const atm = 1.01325 * bar; // Standard atmosphere</pre></div>
 				</div>
+	 </div>
 </div>
