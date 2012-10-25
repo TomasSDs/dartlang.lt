@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Product">
+<head>
+	<meta charset="UTF-8">
+
+  {% capture page_title %}{% if page.title %}{{ page.title }} | {%endif%}Dart: Structured web apps{% endcapture %}
+  <title>{{ page_title }}</title>
+  <meta itemprop="name" content="{{ page_title }}">
+  <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Dart is a new platform for building structured web apps for modern browsers. It includes a language, a VM, libraries, tools, and a compiler to JavaScript. Try Dart today!{% endif %}">
+</head>
+<body>
+	body begin

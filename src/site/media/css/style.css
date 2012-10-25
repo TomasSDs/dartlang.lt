@@ -1,0 +1,74 @@
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
+
+body {
+	 padding-top: 60px;
+	 color: #333;
+}
+
+p {
+	 font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	 margin: 0 0 11px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	 margin: 0;
+	 font-family: inherit;
+	 font-weight: bold;
+	 color: inherit;
+	 text-rendering: optimizelegibility;
+}
+
+h2 {
+	 font-size: 24px;
+	 line-height: 44px;
+}
+
+article.homepage section {
+	 margin-bottom: 60px;
+}
+
+article.homepage h2 {
+	 color: #00A4E4;
+	 -webkit-text-stroke: 0.5px;
+}
+
+article.homepage section .callouts h2 {
+	 text-transform: uppercase;
+	 font-family: "Montserrat",sans-serif;
+}
+
+.navbar .brand {
+	 float: left!important;
+	 padding: 8px 20px 12px!important;
+	 margin-left: -20px!important;
+	 font-size: 0!important;
+}
+
+.homepage #top .content {
+	 background-image: url("../img/homepage_top_content.webp");
+	 text-align: center;
+	 padding-top: 30px;
+	 background-position: left bottom;
+}
+.homepage #top .content .logo {
+	 margin-bottom: 36px;
+	 position: relative;
+	 left: -28px;
+}
+
+.homepage #top .content {
+	 font-size: 18px;
+	 font-weight: 200;
+	 line-height: 33px;
+	 color: inherit;
+}
