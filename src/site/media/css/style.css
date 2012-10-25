@@ -33,6 +33,24 @@ h2 {
 	 line-height: 44px;
 }
 
+pre {
+	display: block;
+	padding: 10.5px;
+	margin: 0 0 11px;
+	font-size: 12.95px;
+	line-height: 22px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: whiteSmoke;
+	border: 1px solid #CCC;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
 article.homepage section {
 	 margin-bottom: 60px;
 }
@@ -72,3 +90,4 @@ article.homepage section .callouts h2 {
 	 line-height: 33px;
 	 color: inherit;
 }
+

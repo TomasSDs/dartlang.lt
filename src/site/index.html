@@ -34,19 +34,19 @@ layout: homepage
 					 </p>
 					 
 					 <div class="visible-desktop">
-						  <div class="highlight">
-								{% highlight dart %}
-									import 'dart:html';
-									<b></b>
-									main() {
-									  var msg = query('#msg');
-									  var btn = new ButtonElement();
-									  btn.text = 'Click me!';
-									  btn.on.click.add((e) => msg.text = 'Dart!');
-									  document.body.nodes.add(btn);
-									}
-								{% endhighlight %}
-						  </div>
+						<div class="highlight">
+{% highlight dart %}
+import 'dart:html';
+
+main() {
+  var msg = query('#msg');
+  var btn = new ButtonElement();
+  btn.text = 'Click me!';
+  btn.on.click.add((e) => msg.text = 'Dart!');
+  document.body.nodes.add(btn);
+}
+{% endhighlight %}
+						</div>
 					 </div>
 				</div>
 				<div class="span4">
