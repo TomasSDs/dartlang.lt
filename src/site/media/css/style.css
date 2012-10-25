@@ -1,23 +1,35 @@
-/* Large desktop */
-@media (min-width: 1200px) { ... }
- 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { ... }
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { ... }
- 
-/* Landscape phones and down */
-@media (max-width: 480px) { ... }
-
 body {
 	 padding-top: 60px;
 	 color: #333;
 }
 
 p {
-	 font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	 margin: 0 0 11px;
+	 font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	 font-size: 14px;
+	 line-height: 22px;
+}
+
+ul, ol {
+padding: 0;
+margin: 0 0 11px 25px;
+}
+
+li {
+	 display: list-item;
+	 text-align: -webkit-match-parent;
+	 line-height: 22px;
+}
+
+article.homepage #top p {
+font-size: 18px;
+font-weight: 200;
+line-height: 33px;
+color: inherit;
+}
+
+div.editor-current-version {
+font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,9 +40,26 @@ h1, h2, h3, h4, h5, h6 {
 	 text-rendering: optimizelegibility;
 }
 
+h1 {
+	 font-size: 30px;
+	 line-height: 44px;
+}
+
 h2 {
 	 font-size: 24px;
 	 line-height: 44px;
+}
+
+section {
+margin-bottom: 1em;
+}
+
+ol {
+list-style: decimal;
+}
+
+ol.toc li {
+list-style-type: none;
 }
 
 pre {
@@ -49,6 +78,60 @@ pre {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
+}
+
+footer {
+	 border-top: 1px solid #CECECE;
+	 background-color: #EFEFEF;
+	 color: #999;
+	 font-size: 13px;
+	 padding: 70px 0;
+	 margin-top: 50px;
+}
+
+footer ul {
+	 list-style: none;
+	 margin: 0;
+}
+
+footer .copyright {
+	 padding-top: 30px;
+	 text-align: center;
+}
+
+label.os-choice {
+	 display: inline;
+}
+
+input[type="image"], input[type="checkbox"], input[type="radio"] {
+	 width: auto;
+	 height: auto;
+	 padding: 0;
+	 margin: 3px 0;
+	 line-height: normal;
+	 cursor: pointer;
+	 background-color: transparent;
+	 border: 0 9;
+	 -webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+	 border-radius: 0;
+}
+
+article.homepage ul.buttons {
+	 margin-top: 40px;
+	 text-align: center;
+	 list-style: none;
+}
+
+article.homepage #top ul.buttons li {
+	 margin: 0 1em;
+	 vertical-align: top;
+	 width: 180px;
+	 height: 73px;
+}
+
+article.homepage ul.buttons li {
+	 display: inline-block;
 }
 
 article.homepage section {
@@ -72,16 +155,18 @@ article.homepage section .callouts h2 {
 	 font-size: 0!important;
 }
 
-.homepage #top .content {
+.homepage #top {
 	 background-image: url("../img/homepage_top_content.webp");
+	 background-position: left bottom;
+}
+
+.homepage #top .content {
 	 text-align: center;
 	 padding-top: 30px;
-	 background-position: left bottom;
 }
 .homepage #top .content .logo {
 	 margin-bottom: 36px;
 	 position: relative;
-	 left: -28px;
 }
 
 .homepage #top .content {

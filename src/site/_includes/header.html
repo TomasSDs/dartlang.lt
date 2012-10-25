@@ -9,11 +9,11 @@
 	<meta itemprop="image" content="{{ base_url }}media/img/dart.png">
 	<meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Dart yra nauja platforma skirta kurti struktūrizuotoms web aplikacijoms modernioms web naršyklėms. Dart sudaro: kalba, VM, bibliotekos, įrankiai ir JavaScript kompiliatorius. Išbandykite tai šiandien!{% endif %}">
 	 
-	<link href="{{ base_url }}media/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="{{ base_url }}media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="{{ base_url }}media/css/style.css" rel="stylesheet">
 	<link href="{{ base_url }}media/css/pygments.css" rel="stylesheet">
-
+	<link href="{{ base_url }}media/css/bootstrap-responsive.css" rel="stylesheet">
+	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="{{ base_url }}media/js/bootstrap.min.js"></script>
 </head>
@@ -22,7 +22,7 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="#">
+				<a class="brand" href="{{ base_url }}index.html">
 					<img src="{{ base_url }}media/img/dart-logo.png" alt="Dart">
 				</a>
 
@@ -36,7 +36,7 @@
 						<ul class="dropdown-menu">
 							<li class="nav-header">Kalba</li>
 							<li>
-								<a href="#" class="disabled">Kalbos gidas</a>										 
+								<a href="{{base_url}}dokumentacija/kalbos-gidas">Kalbos gidas</a>										 
 								<a href="#">Kalbos specifikacija</a>										 
 							</li>
 						</ul>

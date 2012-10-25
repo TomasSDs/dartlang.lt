@@ -1,0 +1,26 @@
+<div class="editor download-buttons">
+  {% for editor in site.custom.downloads.binaries %}
+	 <div class="{{ editor.os }} downloads">
+		  {% if editor.os == 'macos' %}
+		  <a class="download-link btn btn-primary" data-bits="64" data-os="{{ editor.os }}" data-build="integration" href="{{ site.custom.downloads.editor-url-prefix }}-integration/latest/darteditor-{{ editor.os }}-64.{{ editor.editor-ext }}">
+		  <i class="icon-download-alt"></i>
+		  Atsisiųsti Dart Editor
+		  </a>
+		  {% else %}
+		  <a class="download-link btn btn-primary" data-bits="64" data-os="{{ editor.os }}" data-build="integration" href="{{ site.custom.downloads.editor-url-prefix }}-integration/latest/darteditor-{{ editor.os }}-64.{{ editor.editor-ext }}">
+		  <i class="icon-download-alt"></i>
+		  Atsisiųsti 64-bitų Dart Editor
+		  </a>
+		  <a class="download-link btn btn-primary" data-bits="32" data-os="{{ editor.os }}" data-build="integration" href="{{ site.custom.downloads.editor-url-prefix }}-integration/latest/darteditor-{{ editor.os }}-32.{{ editor.editor-ext }}">
+		  <i class="icon-download-alt"></i>
+		  Atsisiųsti 32-bitų Dart Editor
+		  </a>
+		  {% endif %}
+	 </div>
+  {% endfor %}
+  
+  <div class="editor-current-version">
+    Dabartinė „Dart Editor“ versija:
+    <span class="editor-build-rev-integration">[calculating]</span>
+  </div>
+</div>

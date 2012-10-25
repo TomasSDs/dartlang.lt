@@ -1,3 +1,63 @@
 </div>
+
+<footer>
+	 <div class="container">
+		  <div class="row no-print">
+				<div class="span3">
+					 <h4>Dart dokumentacija</h4>
+					 
+					 <ul>
+					 </ul>
+				</div>
+				
+				<div class="span3">
+					 <h4>Dart įrankiai</h4>
+					 
+					 <ul>
+					 </ul>
+				</div>
+				
+				<div class="span3">
+					 <h4>Dart resursai</h4>
+					 
+					 <ul>
+					 </ul>
+				</div>
+				
+				<div class="span3">
+					 <h4>Dart kūrimas</h4>
+					
+					 <ul>
+					 </ul>
+				</div>
+		  </div>
+		  <div class="row copyright">
+				<div class="span8 offset2">
+				<p>
+				{% if license %}
+				{{ license }}
+				{% else %}
+				
+				Išskyrus tuos atvejus, kai nurodyta kitaip, šio puslapio turinys yra 
+				licencijuotas pagal <a href="http://creativecommons.org/licenses/by/3.0/">Creative 
+				Commons Attribution 3.0 licenciją</a>, o
+				kodo pavyzdžiai yra licencijuoti pagal 
+				<a href="http://code.google.com/google_bsd_license.html">BSD licenciją</a>.
+				
+				{% endif %}
+				</p>
+				<p>
+					 <a href="{{base_url}}pts.html">Paslaugų teikimo sąlygos</a> &mdash;
+					 <a href="http://www.google.com/intl/lt/policies/privacy/">Privatumo politika</a>
+				</p>
+				</div>
+		  </div>
+	 </div>
+</footer>
+
+{% for js in page.js %}
+<script {% if js.defer %}defer{% endif %} src="{{ js.url }}"></script>
+{% endfor %}
+
 </body>
 </html>

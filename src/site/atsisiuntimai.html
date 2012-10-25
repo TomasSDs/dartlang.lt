@@ -1,0 +1,94 @@
+---
+layout: default
+title: "Atsisiuntimai"
+description: "Download Dart Editor, the Dart SDK, and Dartium. Also, get the source code for the Dart project."
+js:
+- url: media/js/os-switcher.js
+  defer: true
+- url: media/js/editor-version.js
+  defer: true
+---
+<h1>{{ page.title }}</h1>
+
+<p>
+  Pasirinkite savo OS:
+  {% include os-choices.html %}
+</p>
+
+<section id="editor">
+  <h2>Viskas ko jums reikia</h2>
+
+  <p>
+	 Su Dart Editor jūs galėsite kurti, kompiliuoti ir paleisti: serverines arba web tipo aplikacijas.
+	 Dart Editor atsiuntimo paketas integruoja SDK ir Dartium.
+  </p>
+
+  <p>
+  {% include downloads/_dart-editor.html %}
+  </p>
+
+  <p>
+  {% include downloads/_dart-editor-continuous.html %}
+  </p>
+</section>
+
+<section id="sdk">
+  <h2>Tik SDK</h2>
+
+  <p>
+	 SDK paketą sudaro Dart-to-JavaScript kompiliatorius (<em>dart2js</em>),
+	 Dart VM ir Dart bibliotekos.
+  </p>
+
+  {% include downloads/_sdk.html %}
+
+</section>
+
+<section id="dartium">
+  <h2>Tik Dartium</h2>
+
+  <p>
+  This build of Chromium has the Dart VM,
+  letting you run and debug Dart scripts
+  without first compiling them to JavaScript.
+  </p>
+  
+  <p>
+		Ši Chromium versija turi integruotą Dart VM, kas leis jums paleisti ir derinti Dart skriptus 
+		iš pradžių <b>ne</b>kompiliuojant jų į JavaScript.
+  </p>
+
+  {% include downloads/_dartium.html %}
+
+</section>
+
+
+<section id="project">
+  <h2>Išeitinis kodas</h2>
+  
+  <p>
+		Jūs galite atsisiųsti, naršyti ir prisidėti prie mūsų išeitinio kodo per 
+		<a href="http://dart.googlecode.com">Dart atviro kodo projektą</a>.
+  </p>
+
+  <ul>
+    <li>
+      <a href="http://code.google.com/p/dart/source/browse/">Naršykite</a>
+      kodą
+    </li>
+    <li>
+      <a href="http://code.google.com/p/dart/wiki/GettingTheSource?tm=4">Patikrinkite</a>
+      šaltinio kodą tiesiogiai, naudojantis Subversion.
+    </li>
+    <li>
+      <a href="http://code.google.com/p/dart/wiki/Building#Building_everything">Sukonstruokite</a>
+		šaltinį naudojantis projekto konstravimo įrankiais ir skriptais.
+      </a>
+    </li>
+    <li>
+      <a href="http://code.google.com/p/dart/wiki/Contributing">Įkelkite</a>
+      pakeitimus į Dart projektą.
+    </li>
+  </ul>
+
+</section>

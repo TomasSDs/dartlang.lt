@@ -1,0 +1,53 @@
+---
+layout: default
+title: "Kalbos gidas"
+description: "Išmokite pagrindines Dart kalbos ypatybes."
+---
+
+<h1 id="dart-kalbos-gidas">{{ page.title }}</h1>
+
+<p>Šis straipsnis parodys jums kaip naudotis visais svarbiausiais Dart kalbos ypatumais, nuo kintamųjų ir 
+	 operatorių iki klasių ir bibliotekų, su prielaida, kad jūs jau žinote kaip programuoti 
+	 kitokia kalba.</p>
+
+<section>
+<h4 id="TOC"> Contents </h4>
+  <ol class="toc">
+    <li><a href="#standartine-dart-programa">Standartinė Dart programa</a></li>
+  </ol>
+</section>
+
+<div class="sect1" title="A basic Dart program">
+	 <h2 id="standartine-dart-programa">Standartinė Dart programa</h2>
+
+<p>Sekantis kodas panaudoja nemažai Dart kalbos standartinių ypatybių.</p>
+{% highlight dart %}
+// Sukuriama funkcija
+spausdintiSkaiciu (num aSkaicius) {
+  print('Skaicius yra: $aSkaicius.');    // Atspausdina tekstą į konsolę
+}
+
+// Čia vieta, kurioje aplikacija pradeda darbą
+main() {
+  var skaicius = 42;            // Deklaruojamas ir inicijuojamas kintamasis.
+  spausdintiSkaiciu(skaicius);        // Iškviečiama funkcija
+}
+{% endhighlight %}
+
+<p>Here’s what this program uses that applies to all (or almost all)
+    Dart apps:</p>
+
+	 <div class="variablelist">
+		  // <em class="replaceable">This is a comment.</em></code></span></dt><dd><p>Use // to indicate that the rest of the line is a comment.
+				Alternatively, use /* ... */. For details, see <a class="xref" href="ch02.html#comments" title="Comments">Comments</a>.</p></dd><dt><span class="term"><code class="literal">num</code></span></dt><dd><p>A type. Some of the other built-in types are String, int, and
+				bool.</p></dd><dt><span class="term"><code class="literal">100</code></span></dt><dd><p>A number <em class="firstterm">literal</em>. Literals are a kind
+				of compile-time constant.</p></dd><dt><span class="term"><code class="literal">print()</code></span></dt><dd><p>A handy way to display output.</p></dd><dt><span class="term"><code class="literal">'...'</code> (or <code class="literal">"..."</code>)</span></dt><dd><p>A string literal.</p></dd><dt><span class="term"><code class="literal">$<em class="replaceable">variableName</em></code> (or
+				<code class="literal">${<em class="replaceable">expression</em>}</code>)</span></dt><dd><p>String interpolation: including a variable or expression’s
+				string equivalent inside of a string literal. For more information,
+				see <a class="xref" href="ch02.html#strings" title="Strings">Strings</a>.</p></dd><dt><span class="term"><code class="literal">main()</code></span></dt><dd><p>The special, <span class="emphasis"><em>required</em></span>, top-level function
+				where app execution starts.</p></dd><dt><span class="term"><code class="literal">var</code></span></dt><dd><p>A way to declare a variable without specifying its
+				type.</p></dd></dl></div>
+
+<aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>Our code follows the conventions in the <a class="ulink" href="http://www.dartlang.org/articles/style-guide/">Dart Style
+				Guide.</a> For example, we use two-space indentation.</div></aside>
+</div>
