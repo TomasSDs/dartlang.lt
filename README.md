@@ -1,6 +1,4 @@
 Dart Lithuania
 ===========
 
-www.dartlang.
-
-tomo change
+www.dartlang.lt
