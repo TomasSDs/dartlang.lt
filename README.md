@@ -1,4 +1,4 @@
-Dart Lietuva
+Dart Latvija
 ===
 
 www.dartlang.ru
