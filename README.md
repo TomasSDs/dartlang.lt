@@ -1,4 +1,4 @@
 Dart Lietuva
 ===
 
-www.dartlang.ru
+www.dartlang.lt
