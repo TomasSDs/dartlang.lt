@@ -180,7 +180,7 @@ assert(skaitliukas == null);     // Kintamųjų reikšmės (net jei jų reikšm�
 				</div>
 		  </aside>
 
-		  <div class="sect2" title="Optional types">
+		  <div class="sect2" title="Neprivalomi tipai">
 				<h3 id="variables-optional-types"/>Neprivalomi tipai</h3>
 		  
 				<p>Jūs turite galimybę pridėti statinius tipus savo kintamųjų
@@ -197,20 +197,45 @@ assert(skaitliukas == null);     // Kintamųjų reikšmės (net jei jų reikšm�
 					 <strong>Pastaba: </strong>Šis skyrius palaiko
 					 <a class="ulink" href="http://www.dartlang.org/articles/style-guide/#type-annotations">stiliaus
 					 gido rekomendacijas</a> naudoti <code class="literal">var</code>, 
-					 o ne statinius tipus, lokaliems kintamiesiems.
+					 vietoje tipų anotacijos (neprivalomų, statinių tipų), lokaliems kintamiesiems.
 				</div></aside>
 				
-				<div class="sect2" title="Final and const"><h3 id="id554927"/>Final and const</h3><p>If you never intend to change a variable, use <code class="literal">final</code> or <code class="literal">const</code>, either instead of <code class="literal">var</code> or in addition to a type. A final variable
-				can be set only once; a const variable is a compile-time
-				constant.</p><p>A local, top-level, or class variable that’s declared as <code class="literal">final</code> is initialized the first time it’s
-				used.</p><pre class="programlisting">final name = 'Bob';   // Or: final String name = 'Bob';
-				// name = 'Alice';    // Uncommenting this results in an error</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>Lazy initialization of final variables helps apps start up
-				faster.</p></div><p>Use <code class="literal">const</code> for variables that
-				you want to be compile-time constants. Where you declare the variable,
-				set the value to a compile-time constant such as a literal, a const
-				variable, or the result of an arithmetic operation on constant
-				numbers.</p><pre class="programlisting">const bar = 1000000;       // Unit of pressure (in dynes/cm2)
-				const atm = 1.01325 * bar; // Standartinė atmosfera</pre></div>
+				<div class="sect2" title="Final ir const">
+					 <h3 id="id554927"/>Final ir const</h3>
+					 
+					 <p>Jei kėtinate niekada nekeisti kintamojo reikšmės -
+					 vietoje <code class="literal">var</code> naudokite 
+					 <code class="literal">final</code> arba <code class="literal">const</code>. 
+					 <code class="literal">Final</code> ir 
+					 <code class="literal">const</code> galite naudoti kartu su tipo anotacija 
+					 t.y. kartu su neprivalomu tipu.</p>
+
+					 <p>Lokalus, aukščiausio lygio arba klasės kintamasis, deklaruotas kaip 
+					 <code class="literal">final</code> yra inicijuojamas iškarto kai yra deklaruojamas.</p>
+
+{% highlight dart %}
+final vardas = 'Jonas';   // Arba: final String vardas = 'Jonas';
+// vardas = 'Alice';      // Jei atkomentuosim turėsime klaidą, nes bandome keisti konstantos reikšmę.
+{% endhighlight %}
+
+					 <aside class="note" title="Pastaba">
+
+						  <div class="alert alert-info">
+								<strong>Pastaba: </strong>Tingios iniciacijos arba final 
+								kintamieji padeda programai pasileisti greičiau.
+						  </div>
+
+						  <p>Naudokite <code class="literal">const</code> kintamiesiems, kuriuos norite 
+						  paversti į kompiliavimo laiko konstantas. Deklaruojant kintamąjį, 
+						  nustatykite reikšmę į kompiliavimo laiko konstantą (kaip tiksli reikšmė (literal), 
+						  konstantos kintamasis, arba aritmetinės operacijos rezultatas).</p>
+
+{% highlight dart %}
+const sk = 1000000;          // Slėgio vienetas
+const atm = 1.01325 * sk;    // Standartinė atmosfera
+{% endhighlight %}
+					 </aside>
+				</div>
 		  </div>
 	 </div>
 </div>
