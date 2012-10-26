@@ -1,0 +1,191 @@
+<<<<<<< HEAD
+---
+layout: default
+title: "Kalbos gidas"
+description: "Išmokite pagrindines Dart kalbos ypatybes."
+---
+
+abc
+def
+ghj
+
+<h1 id="dart-kalbos-gidas">{{ page.title }}</h1>
+
+<p>Šis straipsnis parodys jums kaip naudotis visais svarbiausiais Dart kalbos ypatumais, nuo kintamųjų ir 
+	 operatorių iki klasių ir bibliotekų, su prielaida, kad jūs jau žinote kaip programuoti 
+	 kitokia kalba.</p>
+
+<section>
+<h2 id="TOC">Turinys</h2>
+  <ol class="toc">
+    <li><a href="#standartine-dart-programa">Standartinė Dart programa</a></li>
+    <li><a href="#svarbus-faktai">Svarbūs faktai</a></li>
+  </ol>
+</section>
+
+<div class="sect1" title="A basic Dart program">
+	 <h2 id="standartine-dart-programa">Standartinė Dart programa</h2>
+
+	 <p>Sekantis kodas panaudoja nemažai Dart kalbos standartinių ypatybių.</p>
+{% highlight dart %}
+// Sukuriama funkcija
+spausdintiSkaiciu (num aSkaicius) {
+  print('Skaicius yra: $aSkaicius.');    // Atspausdina tekstą į konsolę
+}
+
+// Čia vieta, kurioje aplikacija pradeda darbą
+main() {
+  var skaicius = 42;                  // Deklaruojamas ir inicijuojamas kintamasis.
+  spausdintiSkaiciu(skaicius);        // Iškviečiama funkcija
+}
+{% endhighlight %}
+
+	 <p><b>Štai ką ši programa naudoja:</b> (tai taip pat naudojama beveik visuose Dart aplikacijose)</p>
+
+	 <div class="variablelist">
+		  <dt><span class="term"><code><em class="replaceable">// Tai yra komentaras.</em></code></span></dt>
+		  <dd>
+				<p>Naudokite // nurodymui, kad eilutės dalis yra komentaras.
+					 Arba, naudokite /* ... */. Dėl išsamesnės informacijos žr. 
+					 <a class="xref" href="#komentarai" title="Komentarai">Komentarai</a>.
+				</p>
+		  </dd>
+		  
+		  <dt>
+				<span class="term"><code class="literal">num</code></span>
+		  </dt>
+		  <dd>
+				<p>Tipas. Keletas kitų integruotų tipų yra String, int ir bool.</p>
+		  </dd>
+	 
+		  <dt><span class="term"><code class="literal">42</code></span></dt>
+		  <dd><p>Tikslus skaičius (<em class="firstterm">literal</em>).</p></dd>
+		  
+		  <dt><span class="term"><code class="literal">print()</code></span></dt>
+		  <dd><p>Patogus būdas išvesti atsakymui į konsolę.</p></dd>
+		  
+		  <dt>
+				<span class="term"><code class="literal">'...'</code> 
+				(arba <code class="literal">"..."</code>)</span>
+		  </dt>
+			<dd><p><em class="firstterm">String literal'as</em>: string tipo reikšmė (tekstas).</p></dd>
+			
+			<dt>
+				<span class="term"><code class="literal">$<em class="replaceable">kintamojoVardas</em></code> (arba
+				<code class="literal">${<em class="replaceable">išraiška</em>}</code>)</span>
+			</dt>
+			<dd>
+				 <p>String interpoliacija: kintamojo arba išraiškos integravimas į ekvivalenčią string reikšmę (string literal'ą)</p>
+			</dd>
+			
+			<dt>
+				<span class="term"><code class="literal">main()</code></span>
+			</dt>
+			<dd><p>Speciali, <span class="emphasis"><em>privaloma</em></span>, aukščiausio lygio funkcija 
+					  nurodanti programos pradžią.</p>
+			</dd>
+			
+			<dt><span class="term"><code class="literal">var</code></span></dt>
+			<dd><p>Būdas kintamojo deklaravimui nenurodant jo tipo.</p></dd></dl>
+	 </div>
+
+	 <aside class="note" title="Note">
+		  <div class="alert alert-info">
+				<strong>Pastaba: </strong>Mūsų kodas atitinka <a class="ulink" href="http://www.dartlang.org/articles/style-guide/">Dart Stiliaus Gido</a> kodą. Pavyzdžiui, 
+				mes naudojame „dviejų tarpų“ tabuliacijas.
+		  </div>
+	 </aside>
+</div>
+
+<div class="sect1" title="Svarbūs faktai">
+	 <h2 id="svarbus-faktai"/>Svarbūs faktai</h2>
+
+	 <p>Mokantis Dart kalbos siūlome prisiminti šiuos faktus ir sąvokas.</p>
+
+	 <div class="itemizedlist">
+		  <ul class="itemizedlist">
+				<li class="listitem">
+					 <p>
+						  Viskas ką tik galite išsaugoti į kintamąjį yra
+						  <span class="emphasis"><em>objektas</em></span>, 
+						  ir kiekvienas objektas yra instancija į
+						  <span class="emphasis"><em>klasę</em></span>. 
+						  Netgi skaičiai ir funkcijos yra objektai.
+						  Visi obejektai paveldi 
+						  <a class="ulink" href="http://api.dartlang.org/dart_core/Object.html" target="_blank">Object</a>
+						  klasę.
+					 </p>
+				</li>
+
+				<li class="listitem">
+					 <p>
+						  Specifying static types (such as 
+						  <code class="literal">num</code> in the preceding example) clarifies your
+						  intent and enables static checking by tools, but it’s optional. (You
+						  might notice when you’re debugging your code that objects with no
+						  specified type get a special type: <code class="literal">dynamic</code>.)
+					 </p>
+					 
+					 <p>
+						  Nurodant statinius tipus (tokius kaip
+						  <code class="literal">num</code> praeitame pavizdyje) paaiškinami , but it’s optional. (You
+						  might notice when you’re debugging your code that objects with no
+						  specified type get a special type: <code class="literal">dynamic</code>.)
+					 </p>
+				</li>
+				
+				<li class="listitem">
+					 <p>
+						  Dart apdoroja jūsų kodą dar prieš jį paleidžiant. Galite padėti 
+						  Dart aptikti klaidas. Pavyzdžiui, naudojant tipus, arba kompiliavimo 
+						  laiko konstantas, kintamiesiems - galite greičiau rasti klaidą kode ir 
+						  paleisti savo programą greičiau.
+					 </p>
+				</li>
+		  </ul>
+	 </div>
+</div>
+
+<div class="sect1" title="Kintamieji" id="kintamieji">
+	 <h2 id="variables"/>Kintamieji</h2>
+	 
+	 <p>
+		  Šiame pavizdyje parodome kaip sukuriamas kintamasis ir kaip jam priskiriama reikšmė:
+	 </p>
+
+{% highlight dart %}
+var vardas = 'Paulius';
+{% endhighlight %}
+	 
+	 <p>
+		  Kintamieji yra nuorodos. Kintamasis pavadinimu <code class="literal">vardas</code> 
+		  yra nuoroda į String objektą
+		  su reikšme <span class="quote">“<span class="quote">Paulius</span>”</span>.
+	 </p>
+
+	 <div class="sect2" title="Numatytoji reikšmė"><h3 id="variables-default-value"/>Numatytoji reikšmė</h3><p>Uninitialized variables have an initial value of <code class="literal">null</code>. Even variables with numeric types are
+		  initially null, because numbers are objects.</p><pre class="programlisting">int lineCount;
+	 assert(lineCount == null); // Variables (even if they will be numbers) are initially null.</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>The assert() call is ignored in production mode. In checked
+				mode, <code class="literal">assert(<em class="replaceable"><code>condition</code></em>)</code>
+				throws an exception unless <em class="replaceable"><code>condition</code></em> is
+				true. For details, see <a class="xref" href="ch02.html#assert" title="Assert">Assert</a>.</div></aside><div class="sect2" title="Optional types"><h3 id="variables-optional-types"/>Optional types</h3><p>You have the option of adding static types to your variable
+		  declarations:</p><pre class="programlisting">String name = 'Bob';</pre><p>Adding types is a way to clearly express your intent. Tools such
+		  as compilers and editors can use these types to help you, by providing
+		  early warnings for bugs and code completion.</p><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>This chapter follows the <a class="ulink" href="http://www.dartlang.org/articles/style-guide/#type-annotations">style
+				guide recommendation</a> of using <code class="literal">var</code>, rather than type annotations, for local
+				variables.</div></aside><div class="sect2" title="Final and const"><h3 id="id554927"/>Final and const</h3><p>If you never intend to change a variable, use <code class="literal">final</code> or <code class="literal">const</code>, either instead of <code class="literal">var</code> or in addition to a type. A final variable
+		  can be set only once; a const variable is a compile-time
+		  constant.</p><p>A local, top-level, or class variable that’s declared as <code class="literal">final</code> is initialized the first time it’s
+		  used.</p><pre class="programlisting">final name = 'Bob';   // Or: final String name = 'Bob';
+	 // name = 'Alice';    // Uncommenting this results in an error</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>Lazy initialization of final variables helps apps start up
+				faster.</p></div><p>Use <code class="literal">const</code> for variables that
+		  you want to be compile-time constants. Where you declare the variable,
+		  set the value to a compile-time constant such as a literal, a const
+		  variable, or the result of an arithmetic operation on constant
+		  numbers.</p><pre class="programlisting">const bar = 1000000;       // Unit of pressure (in dynes/cm2)
+	 const atm = 1.01325 * bar; // Standartinė atmosfera</pre></div>
+				</div>
+	 </div>
+</div>
+=======
+>>>>>>> 0a75ea5e3320ff92b197a1b7037f9d8cf0790645
