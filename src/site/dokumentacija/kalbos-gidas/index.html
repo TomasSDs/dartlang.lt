@@ -159,36 +159,58 @@ var vardas = 'Paulius';
 
 	 <div class="sect2" title="Numatytoji reikšmė">
 		  <h3 id="variables-default-value"/>Numatytoji reikšmė</h3>
-	 
+
 		  <p>
 				Neinicijuoti kintamieji pagal nutylėjimą turi numatytąją reikšmę
 				<code class="literal">null</code>. Net skaičiaus tipo kintamieji iš pradžių yra null, nes
-				skaičiai, kaip ir visa kita Dart kalboje, yra objektai.</p>
-		  
+				skaičiai, kaip ir visa kita Dart kalboje, yra objektai.
+		  </p>
+
 {% highlight dart %}
-  int skaitliukas;
-  assert(skaitliukas == null);     // Kintamųjų reikšmės (net jei jų reikšmės bus skaičiai) iš pradžių yra null.
+int skaitliukas;
+assert(skaitliukas == null);     // Kintamųjų reikšmės (net jei jų reikšmės bus skaičiai) iš pradžių yra null.
 {% endhighlight %}
-		  
-		  <aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>The assert() call is ignored in production mode. In checked
+
+		  <aside class="note" title="Note">
+				<div class="alert alert-info">
+					 <strong>Note: </strong>The assert() call is ignored in production mode. In checked
 				mode, <code class="literal">assert(<em class="replaceable"><code>condition</code></em>)</code>
 				throws an exception unless <em class="replaceable"><code>condition</code></em> is
-				true. For details, see <a class="xref" href="ch02.html#assert" title="Assert">Assert</a>.</div></aside><div class="sect2" title="Optional types"><h3 id="variables-optional-types"/>Optional types</h3><p>You have the option of adding static types to your variable
-		  declarations:</p><pre class="programlisting">String name = 'Bob';</pre><p>Adding types is a way to clearly express your intent. Tools such
-		  as compilers and editors can use these types to help you, by providing
-		  early warnings for bugs and code completion.</p><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>This chapter follows the <a class="ulink" href="http://www.dartlang.org/articles/style-guide/#type-annotations">style
-				guide recommendation</a> of using <code class="literal">var</code>, rather than type annotations, for local
-				variables.</div></aside><div class="sect2" title="Final and const"><h3 id="id554927"/>Final and const</h3><p>If you never intend to change a variable, use <code class="literal">final</code> or <code class="literal">const</code>, either instead of <code class="literal">var</code> or in addition to a type. A final variable
-		  can be set only once; a const variable is a compile-time
-		  constant.</p><p>A local, top-level, or class variable that’s declared as <code class="literal">final</code> is initialized the first time it’s
-		  used.</p><pre class="programlisting">final name = 'Bob';   // Or: final String name = 'Bob';
-	 // name = 'Alice';    // Uncommenting this results in an error</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>Lazy initialization of final variables helps apps start up
-				faster.</p></div><p>Use <code class="literal">const</code> for variables that
-		  you want to be compile-time constants. Where you declare the variable,
-		  set the value to a compile-time constant such as a literal, a const
-		  variable, or the result of an arithmetic operation on constant
-		  numbers.</p><pre class="programlisting">const bar = 1000000;       // Unit of pressure (in dynes/cm2)
-	 const atm = 1.01325 * bar; // Standartinė atmosfera</pre></div>
+				true. For details, see <a class="xref" href="ch02.html#assert" title="Assert">Assert</a>.
 				</div>
+		  </aside>
+
+		  <div class="sect2" title="Optional types">
+				<h3 id="variables-optional-types"/>Neprivalomi tipai</h3>
+		  
+				<p>Jūs turite galimybę pridėti statinius tipus savo kintamųjų
+				deklaracijose:</p>
+				
+{% highlight dart %}String vardas = 'Artūras';{% endhighlight %}
+				
+				<p>Neprivalomų tipų pridėjimas yra būdas aiškiai išreikšti savo tikslą. Tokie įrankiai kaip 
+				kompiliatoriai ir redaktoriai gali jums padėti panaudodami šiuos, jūsų pridėtus, tipus
+				įspėjamųjų pranešimų parodymams dėl klaidos kode ar kodo užbaigimo.
+				</p>
+				
+				<aside class="note" title="Note"><div class="alert alert-info">
+					 <strong>Pastaba: </strong>Šis skyrius palaiko
+					 <a class="ulink" href="http://www.dartlang.org/articles/style-guide/#type-annotations">stiliaus
+					 gido rekomendacijas</a> naudoti <code class="literal">var</code>, 
+					 o ne statinius tipus, lokaliems kintamiesiems.
+				</div></aside>
+				
+				<div class="sect2" title="Final and const"><h3 id="id554927"/>Final and const</h3><p>If you never intend to change a variable, use <code class="literal">final</code> or <code class="literal">const</code>, either instead of <code class="literal">var</code> or in addition to a type. A final variable
+				can be set only once; a const variable is a compile-time
+				constant.</p><p>A local, top-level, or class variable that’s declared as <code class="literal">final</code> is initialized the first time it’s
+				used.</p><pre class="programlisting">final name = 'Bob';   // Or: final String name = 'Bob';
+				// name = 'Alice';    // Uncommenting this results in an error</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>Lazy initialization of final variables helps apps start up
+				faster.</p></div><p>Use <code class="literal">const</code> for variables that
+				you want to be compile-time constants. Where you declare the variable,
+				set the value to a compile-time constant such as a literal, a const
+				variable, or the result of an arithmetic operation on constant
+				numbers.</p><pre class="programlisting">const bar = 1000000;       // Unit of pressure (in dynes/cm2)
+				const atm = 1.01325 * bar; // Standartinė atmosfera</pre></div>
+		  </div>
 	 </div>
 </div>
