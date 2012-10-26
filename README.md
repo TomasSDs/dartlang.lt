@@ -1,6 +1,4 @@
 Dart
 ===
 
-siknaskyle
-
-www.dartlang.lt
+www.dartlang.lt - Tvarkingas readme.
