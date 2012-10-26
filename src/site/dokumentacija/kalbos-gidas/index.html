@@ -157,9 +157,20 @@ var vardas = 'Paulius';
 		  su reikšme <span class="quote">“<span class="quote">Paulius</span>”</span>.
 	 </p>
 
-	 <div class="sect2" title="Numatytoji reikšmė"><h3 id="variables-default-value"/>Numatytoji reikšmė</h3><p>Uninitialized variables have an initial value of <code class="literal">null</code>. Even variables with numeric types are
-		  initially null, because numbers are objects.</p><pre class="programlisting">int lineCount;
-	 assert(lineCount == null); // Variables (even if they will be numbers) are initially null.</pre><aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>The assert() call is ignored in production mode. In checked
+	 <div class="sect2" title="Numatytoji reikšmė">
+		  <h3 id="variables-default-value"/>Numatytoji reikšmė</h3>
+	 
+		  <p>
+				Neinicijuoti kintamieji pagal nutylėjimą turi numatytąją reikšmę
+				<code class="literal">null</code>. Net skaičiaus tipo kintamieji iš pradžių yra null, nes
+				skaičiai, kaip ir visa kita Dart kalboje, yra objektai.</p>
+		  
+{% highlight dart %}
+  int skaitliukas;
+  assert(skaitliukas == null);     // Kintamieji (net jei jų reikšmė bus skaičiai) iš pradžių yra null.
+{% endhighlight %}
+		  
+		  <aside class="note" title="Note"><div class="alert alert-info"><strong>Note: </strong>The assert() call is ignored in production mode. In checked
 				mode, <code class="literal">assert(<em class="replaceable"><code>condition</code></em>)</code>
 				throws an exception unless <em class="replaceable"><code>condition</code></em> is
 				true. For details, see <a class="xref" href="ch02.html#assert" title="Assert">Assert</a>.</div></aside><div class="sect2" title="Optional types"><h3 id="variables-optional-types"/>Optional types</h3><p>You have the option of adding static types to your variable
