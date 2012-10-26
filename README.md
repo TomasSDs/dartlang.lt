@@ -1,6 +1,6 @@
-Dart Lithuania
+Dart Russia
 ===
 
 www.dartlang.lt
 
-Tomo vertims added.
+Tomo pakeitimas.
