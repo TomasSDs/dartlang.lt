@@ -50,6 +50,11 @@ h2 {
 	 line-height: 44px;
 }
 
+h3 {
+font-size: 18px;
+line-height: 33px;
+}
+
 section {
 margin-bottom: 1em;
 }
