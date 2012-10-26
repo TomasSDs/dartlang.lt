@@ -1,8 +1,4 @@
-Dart
+Dart Lietuva
 ===
 
-zmogus siknaskyle
-
 www.dartlang.lt
-
-penki
