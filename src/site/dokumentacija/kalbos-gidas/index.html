@@ -245,5 +245,123 @@ const atm = 1.01325 * sk;    // Standartinė atmosfera
 <div class="sect1" title="Integruoti tipai">
 	 <h2 id="integruoti-tipai">Integruoti tipai</h2>
 	 
-	 <p>asd</p>
+	 <p>Dart kalba turi specialų palaikymą šiems tipams:</p>
+	 
+	 <div class="itemizedlist">
+		  <ul class="itemizedlist">
+				<li class="listitem"><p>Skaičių tipams</p></li>
+				<li class="listitem"><p>String tipui</p></li>
+				<li class="listitem"><p>Boolean tipui</p></li>
+				<li class="listitem">
+					 <p>Sąrašams (kitaip žinomi kaip <span class="emphasis"><em>masyvai</em></span>)</p>
+				</li>
+				<li class="listitem"><p>Žemėlapiai (maps)</p></li>
+		  </ul>
+	 </div>
+	 
+	 <p>Kiekvieną šio sąrašo obejektą galite inicijuoti naudodami literalus. Payvzdžiui, 
+		  <code class="literal">'Tai yra String'</code> yra String literalas, o 
+		  <code class="literal">true</code> yra boolean tipo literalas.</p>
+	 
+	 <p>Paprastai, inicijuojant objektus jiems priskiriate kokią nors klasę. Pavyzdžiui, 
+		  <code class="literal">var objektas = new klase();</code>. Tačiau šiems, specialiai palaikomiems, 
+		  tipams galite iš karto priskirti reikšmę, nors šie tipai, kaip ir visa kita Dart kalboje, 
+		  yra objektai.</p>
+	 
+	 <p>Pavyzdžiui, String tipo kintamasis Dart kalboje yra objektas, tačiau jį inicijuojant 
+	 nebūtina jam priskirti klasės ir galima priskirti tiesiog literalą.</p>
+	
+{% highlight dart %}
+string vardas = 'Jonas :)';      // Priskiriame String literalą kintamajam, nors šis yra objektas. 
+{% endhighlight %}
+	 
+	 <p>Kadangi visi kintamieji Dart kalboje yra nuoroda į objektą - į klasę, jūs 
+	 galite naudoti konstruktorius tam, kad inicijuoti kintamuosius. Kai kurie iš integruotų 
+	 tipų turi savo nuosavus konstruktorius. Pavyzdžiui, jūs galite panaudoti Map() konstruktorių tam, 
+	 kad sukurti žemėlapį, pasinaudoję <code class="literal">new Map()</code>.
+	 </p>
+	 
+	 <h3 id="integruoti-tipai-skaiciai">Skaičiai</h3>
+	 
+	 <p>Dart skaičiai būna dviejų tipų:</p>
+	 
+	 <div class="variablelist">
+		  <dl>
+				<dt>
+					 <span class="term"><a class="ulink" href="http://api.dartlang.org/dart_core/int.html">
+					 <code class="literal">int</code> </a></span>
+				</dt>
+				<dd><p>Sveikėji, savito dydžio</p></dd>
+				
+				<dt>
+					 <span class="term"><a class="ulink" href="http://api.dartlang.org/dart_core/double.html">
+					 <code class="literal">double</code> </a></span>
+				</dt>
+				<dd>
+					 <p>64-bitų skaičiai su skaičiais po kableliu, kaip nurodyta IEEE 754 standartu.</p>
+				</dd>
+		  </dl>
+	 </div>
+	 
+	 <p>Abu, <code class="literal">int</code> ir <code class="literal">double</code> tipai yra 
+		  tipo <code class="literal">num</code> subtipai. Num tipas apima pagrindinius operatorius, tokius kaip 
+		  +, -, /, *, tap pat bitinius operatorius, tokius kaip >>. Num tipą sudaro tokie metodai kaip 
+		  abs(), ceil(), floor(), ir kt. Jei tipas num ir jo subtipai neturi tai ko jums reikia, 
+		  <a href="http://api.dartlang.org/dart_core/Math.html" target="_blank">Math</a> klasė gali turėti.
+	 </p>
+	 
+	 <p>Integer tipo skaičiai yra skaičiai be dešimtainio kablelio. Štai keli integer literalų pavyzdžiai.</p>
+	 
+{% highlight dart %}
+var x = 1;
+var hex = 0xDEADBEEF;
+var bigInt = 346534658346524376592384765923749587398457294759347029438709349347;
+{% endhighlight %}
+
+	 <aside class="note" title="Pastaba">
+		  <div class="alert alert-info">
+				<strong>Pastaba: </strong>Sukompiliavus kodą iš Dart į JavaScript, ilgos integer 
+				reikšmės atrodo kitaip nei paleidus Dart kodą per Dart VM. Dėl išsamesnės informacijos žr. 
+				<a href="http://dartbug.com/1533" target="_blank">http://dartbug.com/1533</a>.
+		  </div>
+	 </aside>
+
+	 <p>Jei skaičiuje yra dešimtainis kablelis, tai jo tipas yra double. Keli pavyzdžiai 
+	 kaip priskiriami double literalai:</p>
+	 
+{% highlight dart %}
+var y = 1.1;
+var exp = 1.42e5;
+{% endhighlight %}
+	 
+	 <p>Štai tokiais būdais galite paversti String tipo reikšmę į skaičių, arba atvirkščiai:</p>
+	 
+{% highlight dart %}
+// String -> int
+var vienas = int.parse('1');
+assert(vienas == 1);
+
+// String -> double
+var vienasKablelisVienas = double.parse('1.1');
+assert(vienasKablelisVienas == 1.1);
+
+
+// int -> String
+String vienasString = 1.toString();
+assert(oneAsString == '1');
+
+// double -> String
+String sutvarkytas = 3.14159.toStringAsFixed(2);
+assert(sutvarkytas == '3.14');
+{% endhighlight %}
+	 
+	 <p>Num tipas palaiko tradicinius bitinius: parkelimo (<<, >>), 
+		  AND (&) ir OR (|) operatorius. Pavyzdžiui:</p>
+	 
+{% highlight dart %}
+assert((3 << 1) == 6);  // 0011 << 1 == 0110
+assert((3 >> 1) == 1);  // 0011 >> 1 == 0001
+assert((3 | 4)  == 7);  // 0011 | 0100 == 0111
+{% endhighlight %}
+
 </div>
