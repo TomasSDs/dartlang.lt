@@ -1,6 +1,4 @@
-Dart
+Dart Lietuva
 ===
 
-www.dartlang.lt - Tvarkingas readme.
-
-BUM!
+www.dartlang.lt
