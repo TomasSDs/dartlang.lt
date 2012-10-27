@@ -17,6 +17,10 @@ hr {
 	 border-bottom: 1px solid white;
 }
 
+article.homepage .overview-transition {
+	 text-align: center;
+}
+
 ul, ol {
 	 padding: 0;
 	 margin: 0 0 11px 25px;
@@ -127,6 +131,18 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {
 	 -webkit-border-radius: 0;
 	 -moz-border-radius: 0;
 	 border-radius: 0;
+}
+
+article.homepage h1 {
+	 font-family: "Montserrat",sans-serif;
+	 text-transform: uppercase;
+	 -webkit-text-stroke: 1px;
+}
+
+article.homepage .overview-transition h1 {
+	 font-size: 50px;
+	 margin-bottom: 1em;
+	 color: #AAA;
 }
 
 article.homepage ul.buttons {
