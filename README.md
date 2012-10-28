@@ -9,6 +9,6 @@ Bendradarbiaukite
 
 ### Sąlygos
 
-* Dalyvauti projekte gali visi norintys asmenys, jeigu jie:
-** išmano ir turi patirties su HTML5/CSS3 technologija;
-** gerai supranta, rašo ir kalba angliškai;
+* ## Dalyvauti projekte gali visi norintys asmenys, jeigu jie:
+* Išmano ir turi patirties su HTML5/CSS3 technologija;
+* Gerai supranta, rašo ir kalba angliškai;
