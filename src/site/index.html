@@ -2,136 +2,136 @@
 layout: homepage
 ---
 <article class="homepage">
-	 <section>
-		  <div class="row" id="top">
-				<div class="row content">
-					 <div class="span12">
-						  <div class="row">
-								<div class="span6">
-									 <img class="logo" src="{{ base_url }}media/img/dart.png" width="286" height="116" alt="Dart">
-									 
-									 <p style="padding: 0 20px;">
-										  Dart suteikia struktūrą web aplikacijų inžinerijai su nauja kalba, bibliotekomis ir įrankiais.
-									 </p>
-								</div>
-								<div class="span6">
-									 <iframe width="400" height="225" src="http://www.youtube.com/embed/5KlnlCq2M5Q?vq=hd720" frameborder="0" allowfullscreen=""></iframe>
-								</div>
-						  </div>
-					 </div>
-				</div>
-				<div>
-					 <ul class="buttons">
-						  <li>
-								<a href="{{ base_url }}atsisiuntimai.html" class="btn btn-primary btn-large">
-									 <i class="icon-download-alt"></i>
-									 Atsisiųsti
-								</a>
-						  </li>
-						  <li>
-								<a id="gplus-circle" target="_blank" href="https://plus.google.com/111854668752549555534" rel="publisher" class="btn btn-primary btn-large">
-									 <img src="https://ssl.gstatic.com/images/icons/gplus-16.png" width="16" height="16" alt="Google+" style="vertical-align:-10%">
-									 + Dart
-								</a>
-						  </li>
-						  <li>
-								<a href="http://twitter.com/DartLietuva" target="_blank" class="btn btn-primary btn-large">
-									 <img src="{{base_url}}media/img/twitter.png" width="16" height="16" alt="Twitter" style="vertical-align:-10%">
-									 @ DartLietuva
-								</a>
-						  </li>
-					 </ul>
-				</div>
-		  </div>
-	 </section>
-	 <section>
-		  <div class="row callouts">
-				<div class="span4"> 
-					 <h2>Panašumas</h2>
-					 
-					 <p>
-						  Dart yra <b>objektiškai orentuota, klasėmis paremta kalba</b>. Dart kalba yra 
-						  lengvai išmokstama daugeliui kūrėjų. Dart padės jums 
-						  sukurti struktūrizuotą web aplikaciją.
-					 </p>
-					 
-					 <div class="visible-desktop">
-						<div class="highlight">
-{% highlight dart %}
-import 'dart:html';
+    <section>
+        <div class="row" id="top">
+            <div class="row content">
+                <div class="span12">
+                    <div class="row">
+                        <div class="span6">
+                            <img class="logo" src="{{ base_url }}media/img/dart.png" width="286" height="116" alt="Dart">
 
-main() {
-  var zin = query('#zinute');
-  var mygt = new ButtonElement();
-  mygt.text = 'Paspausk!';
-  mygt.on.click.add((e) => zin.text = 'Dart!');
-  document.body.nodes.add(mygt);
-}
-{% endhighlight %}
-						</div>
-					 </div>
-				</div>
-				<div class="span4">
-					 <h2>Produktyvumas</h2>
-					 
-					 <p>
-						  „Dart Editor“ ir „Dart SDK“ užtikrina integruotą programų kūrimo patirtį. 
-						  Dart Redaktorius palaiko pertvarkymą ir atskaitos taškus, 
-						  kodo užbaigimą, kodo atskaitos taškus, kodo navigaciją ir daugiau.
-						  SDK sudaro savarankiška virtuali mašina, paketų tvarkyklė, ir Chromium naršyklė su 
-						  integruotu Dart VM.
-					 </p>
-					 
-					 <p class="img">
-						  <img src="{{ base_url }}media/img/editor.jpg" alt>
-					 </p>
-				</div>
-				<div class="span4">
-					 <h2>Universalumas</h2>
-					 
-					 <p>
-						  Dart gali būti <strong>sukompiliuota į JavaScript</strong>, todėl jūs galite naudoti tai web aplikacijoms visose 
-						  moderniuose darbastalio ar mobiliuose naršyklėse. Mūsų JavaScript kompiliatorius 
-						  garantuoja minimalų kodą tree-shaking technologijos dėka. Dart aplikacijos taip pat 
-						  gali būti paleidžiamos serveriuose, ant savarankiško Dart VM.
-					 </p>
-					 
-					 <p class="img">
-						  <img src="{{ base_url }}media/img/server-desktop-phone.png" alt>
-					 </p>
-				</div>
-		  </div>
-		  <div class="row callouts">
-				<div class="span4">
-					 <h2>Pradėkite</h2>
-					 
-					 <ul>
-						  <li><a href="{{base_url}}atsisiuntimai.html">Atsisiųskite viską ko jums reikia</a></li>
-					 </ul>
-				</div>
-				<div class="span4">
-					 <h2>Išmokite</h2>
-					 
-					 <ul>
-						  <li><a href="{{base_url}}dokumentacija/kalbos-gidas/">Sekite Dart kalbos gidą</a></li>
-						  <li><a href="http://synonym.dartlang.org/" target="_blank">Palyginkite kalbą su JavaScript kalba</a></li>
-					 </ul>
-				</div>
-				<div class="span4">
-					 <h2>Dalyvaukite</h2>
-					 
-					 <ul>
-						  <li><a href="https://plus.google.com/111854668752549555534" target="_blank">Sekite mus G+</a>,
-								<a href="http://facebook.com/pages/Dart-strukt%C5%ABrizuotos-WEB-aplikacijos/536905336322948" target="_blank">Facebook</a>
-								ir <a href="http://twitter.com/DartLietuva" target="_blank">Twitter</a></li>
-						  <li><a href="http://dartbug.com/new" target="_blank">Praneškite apie klaidą</a></li>
-					 </ul>
-				</div>
-		  </div>
-	 </section>
-	 
-	 <div class="overview-transition">
-		  <hr>
-		  <h1>Apžvalga</h1>
-	 </div>
+                            <p style="padding: 0 20px;">
+                                Dart suteikia struktūrą web aplikacijų inžinerijai su nauja kalba, bibliotekomis ir įrankiais.
+                            </p>
+                        </div>
+                        <div class="span6">
+                            <iframe width="400" height="225" src="http://www.youtube.com/embed/5KlnlCq2M5Q?vq=hd720" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class="buttons">
+                    <li>
+                        <a href="{{ base_url }}atsisiuntimai.html" class="btn btn-primary btn-large">
+                            <i class="icon-download-alt"></i>
+                            Atsisiųsti
+                        </a>
+                    </li>
+                    <li>
+                        <a id="gplus-circle" target="_blank" href="https://plus.google.com/111854668752549555534" rel="publisher" class="btn btn-primary btn-large">
+                            <img src="https://ssl.gstatic.com/images/icons/gplus-16.png" width="16" height="16" alt="Google+" style="vertical-align:-10%">
+                            + Dart
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/DartLietuva" target="_blank" class="btn btn-primary btn-large">
+                            <img src="{{base_url}}media/img/twitter.png" width="16" height="16" alt="Twitter" style="vertical-align:-10%">
+                            @ DartLietuva
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row callouts">
+            <div class="span4"> 
+                <h2>Panašumas</h2>
+
+                <p>
+                    Dart yra <b>objektiškai orentuota, klasėmis paremta kalba</b>. Dart kalba yra 
+                    lengvai išmokstama daugeliui kūrėjų. Dart padės jums 
+                    sukurti struktūrizuotą web aplikaciją.
+                </p>
+
+                <div class="visible-desktop">
+                    <div class="highlight">
+                        {% highlight dart %}
+                        import 'dart:html';
+
+                        main() {
+                        var zin = query('#zinute');
+                        var mygt = new ButtonElement();
+                        mygt.text = 'Paspausk!';
+                        mygt.on.click.add((e) => zin.text = 'Dart!');
+                        document.body.nodes.add(mygt);
+                        }
+                        {% endhighlight %}
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <h2>Produktyvumas</h2>
+
+                <p>
+                    „Dart Editor“ ir „Dart SDK“ užtikrina integruotą programų kūrimo patirtį. 
+                    Dart Redaktorius palaiko pertvarkymą ir atskaitos taškus, 
+                    kodo užbaigimą, kodo atskaitos taškus, kodo navigaciją ir daugiau.
+                    SDK sudaro savarankiška virtuali mašina, paketų tvarkyklė, ir Chromium naršyklė su 
+                    integruotu Dart VM.
+                </p>
+
+                <p class="img">
+                    <img src="{{ base_url }}media/img/editor.jpg" alt>
+                </p>
+            </div>
+            <div class="span4">
+                <h2>Universalumas</h2>
+
+                <p>
+                    Dart gali būti <strong>sukompiliuota į JavaScript</strong>, todėl jūs galite naudoti tai web aplikacijoms visose 
+                    moderniuose darbastalio ar mobiliuose naršyklėse. Mūsų JavaScript kompiliatorius 
+                    garantuoja minimalų kodą tree-shaking technologijos dėka. Dart aplikacijos taip pat 
+                    gali būti paleidžiamos serveriuose, ant savarankiško Dart VM.
+                </p>
+
+                <p class="img">
+                    <img src="{{ base_url }}media/img/server-desktop-phone.png" alt>
+                </p>
+            </div>
+        </div>
+        <div class="row callouts">
+            <div class="span4">
+                <h2>Pradėkite</h2>
+
+                <ul>
+                    <li><a href="{{base_url}}atsisiuntimai.html">Atsisiųskite viską ko jums reikia</a></li>
+                </ul>
+            </div>
+            <div class="span4">
+                <h2>Išmokite</h2>
+
+                <ul>
+                    <li><a href="{{base_url}}dokumentacija/kalbos-gidas/">Sekite Dart kalbos gidą</a></li>
+                    <li><a href="http://synonym.dartlang.org/" target="_blank">Palyginkite kalbą su JavaScript kalba</a></li>
+                </ul>
+            </div>
+            <div class="span4">
+                <h2>Dalyvaukite</h2>
+
+                <ul>
+                    <li><a href="https://plus.google.com/111854668752549555534" target="_blank">Sekite mus G+</a>,
+                        <a href="http://facebook.com/pages/Dart-strukt%C5%ABrizuotos-WEB-aplikacijos/536905336322948" target="_blank">Facebook</a>
+                        ir <a href="http://twitter.com/DartLietuva" target="_blank">Twitter</a></li>
+                    <li><a href="http://dartbug.com/new" target="_blank">Praneškite apie klaidą</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="overview-transition">
+        <hr>
+        <h1>Apžvalga</h1>
+    </div>
 </article>
