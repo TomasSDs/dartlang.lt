@@ -4,7 +4,7 @@ Dart Lietuva
 Jeigu norite prisidėti prie www.dartlang.lt svetainės tobulinimo ir vertimo, turite perskaityti šią 
 įžanginę dokumentaciją „README“.
 
-Bendradarbiaukite
+Bendradarbiaukite su mumis
 ---
 
 ### Sąlygos
