@@ -57,17 +57,17 @@ layout: homepage
 
                 <div class="visible-desktop">
                     <div class="highlight">
-                        {% highlight dart %}
-                        import 'dart:html';
+{% highlight dart %}
+import 'dart:html';
 
-                        main() {
-                        var zin = query('#zinute');
-                        var mygt = new ButtonElement();
-                        mygt.text = 'Paspausk!';
-                        mygt.on.click.add((e) => zin.text = 'Dart!');
-                        document.body.nodes.add(mygt);
-                        }
-                        {% endhighlight %}
+main() {
+  var zin = query('#zinute');
+  var mygt = new ButtonElement();
+  mygt.text = 'Paspausk!';
+  mygt.on.click.add((e) => zin.text = 'Dart!');
+  document.body.nodes.add(mygt);
+}
+{% endhighlight %}
                     </div>
                 </div>
             </div>
