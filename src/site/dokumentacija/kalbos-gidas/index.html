@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Kalbos gidas"
-description: "Išmokite pagrindines Dart kalbos ypatybes."
+description: "Išmokite pagrindines Dart kalbos savybes."
 ---
 <h1 id="dart-kalbos-gidas">{{ page.title }}</h1>
 
@@ -364,3 +364,70 @@ assert((3 | 4)  == 7);  // 0011 | 0100 == 0111
 {% endhighlight %}
 
 </div>
+
+<div class="sect2" title="Strings">
+    <h3 id="strings">String tipas</h3>
+    
+    <p>
+        A Dart string is a sequence of UTF-16 code units. You can use
+        either single or double quotes to create a string:
+    </p>
+    
+    <p>
+        Dart string tipo reikšmė yra UTF-16 vienetų seka. Galima naudoti 
+        ir viengubas, ir dvigubas kabutes tam, kad sukurti string reikšmę:
+    </p>
+    
+ {% highlight dart %}
+var s1 = 'Viengubos kabutės veikia puikiai.';
+var s2 = "Dvigubos kabutės veikia taip pat puikiai.";
+var s3 = 'Lengva ignoruoti string\'inės reikšmės skyriklį.';
+var s4 = "Dar lengviau naudoti kitą string'inės reikšmės skyriklį - dvigubas kabutes.";
+{% endhighlight %}
+    
+    <p>
+        Galite įterpti išraiškos reikšmę String viduje naudojantis
+        
+        ${<span class="emphasis"><em>išraiška</em></span>}. 
+        
+        Jei išraiška yra identifikatorius,
+        galite praleisti {} simbolius. Tam, kad išgauti String reikšmę priskirtą objektui,
+        Dart kviečia objekto toString() metodą.
+    </p>
+    
+    <pre class="programlisting">var s = 'string interpolation';
+
+assert('Dart has $s, which is very handy.' ==
+       'Dart has string interpolation, which is very handy.');
+assert('That deserves all caps. ${s.toUpperCase()} is very handy!' ==
+       'That deserves all caps. STRING INTERPOLATION is very handy!');</pre>
+    
+    <aside class="note" title="Note">
+        <div class="alert alert-info"><strong>Note: </strong>The <code class="literal">==</code> operator tests whether
+                                    two objects are equivalent. Two strings are equivalent if they have
+                                    the same characters.</p></div>
+        <p>You can concatenate strings using adjacent string literals:</p>
+        <pre class="programlisting">var s = 'String ''concatenation'
+        " works even over line breaks.";
+assert(s == 'String concatenation works even over line breaks.');</pre>
+        <p>Another way to create a multi-line string: use a triple quote with
+                                    either single or double quotation marks.</p>
+        <pre class="programlisting">var s1 = '''
+You can create
+multi-line strings like this one.
+''';
+
+var s2 = """This is also a
+multi-line string.""";</pre>
+        <p>You can create a <span class="quote">“<span class="quote">raw</span>”</span> string by prefixing it with
+                                    <code class="literal">r</code>.</p>
+        <pre class="programlisting">var s = r"In a raw string, even \n isn't special.";</pre>
+        <p>For more information on using strings, see <a class="xref" href="ch03.html#ch03-strings-and-regular-expressions" title="Strings and regular expressions">Strings and regular expressions</a>.</p></div><div class="sect2" title="Booleans"><h3 id="booleans"/>Booleans</h3><p>To represent boolean values, Dart has a type named <code class="literal">bool</code>. Only two objects have type bool: the
+                                boolean literals, <code class="literal">true</code> and <code class="literal">false</code>.</p><p>When Dart expects a boolean value, only the value <code class="literal">true</code> is treated as true. All other values are
+                                treated as false. Unlike in JavaScript, values such as <code class="literal">1</code>, <code class="literal">"aString"</code>, and <code class="literal">someObject</code> are all treated as false.</p><p>For example, consider the following code, which is valid both as
+                                JavaScript and as Dart code:</p>
+        
+        <pre class="programlisting">var name = 'Bob';
+if (name) {
+  print('You have a name!'); // Prints in JavaScript, not in Dart.
+}</pre>
