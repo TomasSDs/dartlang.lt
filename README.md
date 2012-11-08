@@ -1,4 +1,4 @@
-Dart Lietuva
+﻿Dart Lietuva
 ===
 
 Jeigu norite prisidėti prie www.dartlang.lt svetainės tobulinimo ir vertimo, turite perskaityti šią 
@@ -21,4 +21,4 @@ Dalyvauti projekte gali visi norintys asmenys, jeigu jie:
 3. Užkomentuokite savo pakeitimus (`git commit -am "Jūsų komentaras. Pvz: ištaisiau klaidą footeryje."`).
 4. Išsiųskite tai: (`git push origin jūsų_raktažodis`)
 5. Atidarykite [„pull“ užklausą](https://github.com/3Dev/dartlang.lt/pulls).
-6. Laukite ir mėgaukitės.
+6. Laukite ir mėgaukitės.a
