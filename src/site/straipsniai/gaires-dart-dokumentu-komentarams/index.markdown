@@ -1,13 +1,11 @@
 ---
 layout: default
-title: "Guidelines for Dart Doc Comments"
-rel:
-  author: kathy-walrath
-description: "How we write doc comments for the Dart APIs."
+title: "Gairės Dart dokumentų komentarams"
+description: "Kaip mes rašome Dart dokumentų komentarus įvairioms API"
 has-permalinks: true
 article:
-  written_on: 2012-11-01
-  collection: everyday-dart
+  written_on: 2012-12-29
+  collection: dart-kiekviena-diena
 ---
 
 # {{ page.title }}
