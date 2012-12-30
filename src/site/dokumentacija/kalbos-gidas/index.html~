@@ -129,8 +129,8 @@ main() {
 					 <p>
 						  Nurodant statinius tipus (tokius kaip
 						  <code class="literal">num</code> praeitame pavzdyje) paaiškina jūsų 
-						  ketinimą ir įgalina statišką tikrinimą prie įrankių, bet tai neprivaloma.
-					      	  (Jūs turėtumėte pastebėti, kai jūs pašalinate savo kodą, kuris prieštarauja
+						  ketinimą ir įgalina statinį tikrinimą prie įrankių, bet tai neprivaloma.
+					      	  (Jūs turėtumėte pastebėti, kai jūs pašalinate savo kodą, kuris pasišalina
 						  be apibrėžto tipo, jis gauna ypatingą tipą: <code class="literal">dinamiškas</code>.)
 					 </p>
 				</li>
