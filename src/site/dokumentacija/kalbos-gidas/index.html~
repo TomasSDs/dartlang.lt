@@ -128,9 +128,10 @@ main() {
 					 
 					 <p>
 						  Nurodant statinius tipus (tokius kaip
-						  <code class="literal">num</code> praeitame pavizdyje) paaiškinami , but it’s optional. (You
-						  might notice when you’re debugging your code that objects with no
-						  specified type get a special type: <code class="literal">dynamic</code>.)
+						  <code class="literal">num</code> praeitame pavzdyje) paaiškina jūsų 
+						  ketinimą ir įgalina statišką tikrinimą prie įrankių, bet tai neprivaloma.
+					      	  (Jūs turėtumėte pastebėti, kai jūs pašalinate savo kodą, kuris prieštarauja
+						  be apibrėžto tipo, jis gauna ypatingą tipą: <code class="literal">dinamiškas</code>.)
 					 </p>
 				</li>
 				
@@ -150,7 +151,7 @@ main() {
 	 <h2 id="variables"/>Kintamieji</h2>
 	 
 	 <p>
-		  Šiame pavizdyje parodome kaip sukuriamas kintamasis ir kaip jam priskiriama reikšmė:
+		  Šiame pavyzdyje parodome kaip sukuriamas kintamasis ir kaip jam priskiriama reikšmė:
 	 </p>
 
 {% highlight dart %}
