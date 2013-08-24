@@ -24,8 +24,8 @@ užuot laikę ją paslaptyje iki 1.0 versijos, išlieka keli svarbūs klausymai.
   <li><a href="#strategy" class="faq-topic">Strategija</a>
   <ol>
     <li><a href="#why-dart">Kodėl Dart?</a></li>
-    <li><a href="#why-fix-the-language">Ar tikrai kalba yra tai ką reikia
-    pataisyti svetainių kūrime?</a></li>
+    <li><a href="#why-fix-the-language"></a>Ar kalba, tikrai turi būti
+    nustatyta internetinių svetainių kūrimui?</a></li>
     <li><a href="#does-dart-divert-effort">Ar dart ketina nukreipti
     bendruomenės pastangas nuo JavaScript-pagrįsto svetainių kūrimo?</a></li>
     <li><a href="#will-dart-be-standardized">Ar Google planuoja įdėti
@@ -49,7 +49,8 @@ užuot laikę ją paslaptyje iki 1.0 versijos, išlieka keli svarbūs klausymai.
     <li><a href="#compare-to-everything-else">Kodėl Dart nėra daugiau kaip Haskell / Smalltalk /
     Python / Scala / ar kita kalba?</a></li>
     <li><a href="#earth-shattering-syntactic-kaboom">Kodėl Dart sintaksė nėra labiau įdomesnė?</a></li>
-    <li><a href="#is-it-a-dynamic-language">Ar tai tikrai dinamiška kalba, jeigu ji neturi eval() arba laukelių pridėjimo į reikšmę vykdymo metu?</a></li>
+    <li><a href="#is-it-a-dynamic-language">Ar tai tikrai dinamiška kalba, jeigu ji neturi eval() arba 
+    laukelių pridėjimo į reikšmę vykdymo metu?</a></li>
     <li><a href="#can-add-reflection">Ar Dart gali pridėti atspindį?</a></li>
     <li><a href="#can-add-everything">Ar Dart gali įdėti struktūros atitikimą,
     nenulinius tipus,sąsajos anties rašymą, dalinį įvertinimą, 
@@ -73,7 +74,7 @@ užuot laikę ją paslaptyje iki 1.0 versijos, išlieka keli svarbūs klausymai.
 
   <li><a href="#tools" class="faq-topic">Vartojimas ir įrankiai</a>
   <ol>
-    <li><a href="#should-i-use-dart-yet">Ar turėčiau rašyti svetainės
+    <li><a href="#should-i-use-dart-yet">Ar turėčiau rašyti web
     aplikacijas Dart kalboje?</a></li>
     <li><a href="#interop-with-js-libs">Kaip Dart kodas sąveikauja
     JavaScript bibliotekose?</a></li>
@@ -110,33 +111,32 @@ If we add space below, it'll just look weird... but maybe that'd be OK.
 {% endcomment %}
 
 <section id="strategy">
-<h2>Strategy</h2>
+<h2>Strategija</h2>
 
 <h3 id="why-dart">K. Kodėl Dart?</h3>
 
-<p>Googlėje mes esame parašėme dalį aplikacijų, mes bandėme įvairius būdus patobulinti 
+<p>A. Googlėje parašėme dalį aplikacijų, mes bandėme įvairius būdus patobulinti 
 kūrimo precesą, beveik sukurti naują kalbą. Dabar mes manome, kad laikas judėti
 link to įgyvendinimo. Mes sukūrėme Dart, kad būtų paprasta rašyti kūrimo įrankius.
 Dart yra gerai pritaikyta moderniom, aukštos kokybės aplikacijų gamybai.
 </p>
 
-<h3 id="why-fix-the-language">K. Ar tikrai kalba yra tai ką reikia pataisyti svetainių kūrime?</h3>
+<h3 id="why-fix-the-language">K. Ar kalba, tikrai turi būt nustatyta internetinių svetainių kūrimui?</h3>
 
 <p>Mes norime <a 
 href="http://hyperboleandahalf.blogspot.com/2010/06/this-is-why-ill-never-be-adult.html">sutaisyti VISKĄ</a>.  
-There's "Dart" the language, and then there's 
-"Dart" the overall project.  The Dart <em>project</em> is betting that 
-the language needs some changes, but we also want to <a 
-href="http://www.dartlang.org/articles/improving-the-dom/">improve the 
-DOM</a> and other libraries, and to improve the tools we use.</p>
+Yra "Dart" kalba, ir tada yra 
+"Dart" bendras projektas. Dart <em>projektas</em> yra lažinimuisi kad 
+kalbai reikia pakeitimų, bet mes taip pat norime <a 
+href="http://www.dartlang.org/articles/improving-the-dom/">patobulinti 
+DOM</a> ir kitas bibliotekas, bei patobulinti įrankius kuriuos mes naudojame.</p>
 
-<p>At the same time, Google is also placing bets that JavaScript 
-<em>can</em> be evolved as needed, and contributing to that work.  
-Google wants web development to be great, and if that happens with 
-JavaScript, we're happy.</p>
+<p>A. Tuo pačiu , Google taip pat stato, kad "JavaScript" gali vystytis kaip reikalingiausia kalba,
+ir gali prisidėti prie šio darbo. Google nori, kad web aplikacijų kūrimas būtų puikus, 
+ir jai tai atsitiks su "JavaScript", mes būsime laimingi.</p>
 
-<h3 id="does-dart-divert-effort">Q. Is Dart going to divert community 
-effort from JavaScript-based web development?</h3>
+<h3 id="does-dart-divert-effort">K. Ar Dart ketina nukreipti bendruomenės
+pastangas iš JavaScript pagrindo web aplikacijų kūrimo?</h3>
 
 <p>If people like Dart and use it, then to a certain extent, yes, but 
 isn't this true of any improvement to existing web development?  Nothing 
