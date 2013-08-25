@@ -115,7 +115,7 @@ If we add space below, it'll just look weird... but maybe that'd be OK.
 
 <h3 id="why-dart">K. Kodėl Dart?</h3>
 
-<p>A. Googlėje parašėme dalį aplikacijų, mes bandėme įvairius būdus patobulinti 
+<p>Googlėje parašėme dalį aplikacijų, mes bandėme įvairius būdus patobulinti 
 kūrimo precesą, beveik sukurti naują kalbą. Dabar mes manome, kad laikas judėti
 link to įgyvendinimo. Mes sukūrėme Dart, kad būtų paprasta rašyti kūrimo įrankius.
 Dart yra gerai pritaikyta moderniom, aukštos kokybės aplikacijų gamybai.
@@ -131,14 +131,14 @@ kalbai reikia pakeitimų, bet mes taip pat norime <a
 href="http://www.dartlang.org/articles/improving-the-dom/">patobulinti 
 DOM</a> ir kitas bibliotekas, bei patobulinti įrankius kuriuos mes naudojame.</p>
 
-<p>A. Tuo pačiu , Google taip pat stato, kad "JavaScript" gali vystytis kaip reikalingiausia kalba,
+<p>Tuo pačiu , Google taip pat stato, kad "JavaScript" gali vystytis kaip reikalingiausia kalba,
 ir gali prisidėti prie šio darbo. Google nori, kad web aplikacijų kūrimas būtų puikus, 
 ir jai tai atsitiks su "JavaScript", mes būsime laimingi.</p>
 
 <h3 id="does-dart-divert-effort">K. Ar Dart ketina nukreipti bendruomenės
 pastangas iš JavaScript pagrindo web aplikacijų kūrimo?</h3>
 
-<p>A. Jeigu žmonėms patinka Dart ir jie naudojasi šia kalba, tada tam tikru mastu, 
+<p>Jeigu žmonėms patinka Dart ir jie naudojasi šia kalba, tada tam tikru mastu, 
 taip, bet ar tai ne tiesa kiekvienam patobulinimui esamui svetainių kūrimui? 
 Nėra nulinės pastangos pasimokyti ar 100% grįžti prie suderintų senūjų naršyklių, 
 tokiu būdu žmonės galytų naudotis ir naujomis ir senomis naršyklėmis. 
@@ -146,10 +146,10 @@ Turėtumėt žiūrėti į tai tokiu būdu: Google deda pastangas tiek Dart, tiek
 plėtoti Dart tuo pačiu metu naudojant "JavaScript" plačiai 
 ir dirbant prie JavaScript įrankių, įgyvendinimo, ir kalbos.</p>
 
-<p>A. Serverio pusė svetainių programavimui vietos randa daugeliui kalboms: 
+<p>Serverio pusė svetainių programavimui vietos randa daugeliui kalboms: 
 Ar Python ištraukia pastangas iš Perl, ar Java sumažina C++? Vėlgi, tam tikru mastu, taip, 
 jie taip daro, bet žmonės paprastai mano, kad sveika situacija, geriau negu visi mes naudotume 
-vieną programavimo programą. Kelios kalbos leidžia greičiau keistis, negu viena kalba 
+vieną programavimo kalbą. Kelios kalbos leidžia greičiau keistis, negu viena kalba 
 pasiekusi standartinį procesą. Be to,  kalbos egzistuoja kartu, skirtingomis nišomis: 
 Ar Groovy tikrai konkuruoja tiesiogiai su C++? Žmonės susiduria su skirtingais inžinerijos 
 kompromisais ir pasirenka skirtingas kalbas išmokti. Galų gale, mes manome, 
@@ -158,30 +158,23 @@ kad vartotojų pusėje, kūrėjai turėtų turėti šios rūšies lankstumą.</p
 <h3 id="will-dart-be-standardized">K. Ar Google planuoja pateikti Dart 
 pagal standartinės institucijos kontrolę?</h3>
 
-<p>Yes, we hope to.  Once Dart reaches a certain level of maturity and 
-acceptance, we expect that a standards process will be the next 
-step.</p>
+<p>Taip, planuojame. Kai Dart pasieks tam tikrą brandos lygį ir pripažinimą,
+mes tikimės, kad standartinis process bus sekantis žingsnis.</p>
 
-<h3 id="how-will-dart-take-input">Q. Until that point, how will you be 
-taking input on changes to Dart?</h3>
+<h3 id="how-will-dart-take-input">K. Iki to momento, kaip atsižvelgsit į įvestį Dart kalboje?</h3>
 
-<p>We plan to handle it like the V8 project.  We'll listen to feedback 
-and issues, and we'll review patches from outside contributors.  A 
-contributor with a good track record can become a committer to the 
-repository.  Google engineers will also be working in the public 
-repository, making visible changes.</p>
+<p>Mes planuojame išlaikyti ją kaip V8 projektą. Mes klausysimės į atsiliepimus ir klausimus,
+bei peržvelgsime kodą iš išorinių pagalbininkų. Pagalbininkas su gerais įrašais gali tapti saugyklos vadovu. 
+Google inžinieriai taip pat dirbs viešose saugyklose, darydami matomus pakeitimus.</p>
 
-<h3 id="why-not-designed-by-standards-body">Q. Why didn't Google make 
-Dart an open standard right from the start?</h3>
+<h3 id="why-not-designed-by-standards-body">K. Kodėl Google nepadarė Dart atviru standrtu nuo pat pradžių?</h3>
 
-<p>We're taking the usual route to get to an open-standard programming 
-language: someone creates a coherent first version, people experiment 
-with it, and we standardize later.  The open standard web platform has 
-been known to add other pieces this way, where standardization follows 
-after a vendor experiment: canvas, for example.  We understand that this 
-route raises concerns, but we think it is sometimes useful, and in 
-particular that it is useful for programming languages, where design by 
-committee is risky.</p>
+<p>Mes atsižvelgiame į įprastą kelią pateikti atvirojo kodo programavimo kalbą: kažkas sukuria 
+pirmają nuoseklią versiją, žmonės eksperimentuoja su ja, ir mes ją standartizuojame vėliau. 
+Atvira standartinė web platforma yra žinoma pridėti kitas dalelytes šiuo atveju, 
+kur standartizacija seka po tiekėjų ekspermentais: pavizdžiui, canvas. Mes suprantame, 
+kad šitas kelias kelia susirūpinimą, bet mes galvojame, kad kartais tai naudinga, 
+ir konkrečiai, tai yra naudinga programavimo kalboms, kur komiteto dizaineriai rizikuoja.</p>
 
 <p>The most recent successful language designed by an open committee was 
 Haskell, starting in 1990.  The most widely used was COBOL, followed by 
@@ -189,7 +182,7 @@ Ada.  It's not a common way to do language design.  Among dozens and
 dozens of major languages, six (give or take a couple of debatables) 
 were designed this way.  (And one of those six was ALGOL-68.) </p>
 
-<h3 id="future-for-GWT">Q. What's the future for GWT?</h3>
+<h3 id="future-for-GWT">K. Kokia GWT ateitis??</h3>
 
 <p>Bruce Johnson <a 
 href="http://googlewebtoolkit.blogspot.com/2011/11/gwt-and-dart.html">posted 
